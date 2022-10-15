@@ -1,0 +1,54 @@
+body {
+  position: relative;
+}
+body #body-bg {
+  background-color: #180f33;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+body #body-bg::before, body #body-bg::after {
+  content: "";
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 5;
+  filter: blur(150px);
+}
+body #body-bg::before {
+  background-color: #cc00ff;
+  top: 25%;
+  left: 27%;
+}
+body #body-bg::after {
+  background-color: #7000ff;
+  top: 40%;
+  right: 27%;
+}
+body main .cars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+}
+body main .cars .car {
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid white;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+}
+body main .cars .car:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 10px rgb(255, 255, 255);
+}
+body main .cars .car .card {
+  height: 100%;
+}
+body main .cars .car .car-img {
+  height: 50%;
+  background-color: orangered;
+}
+body main .cars .car .car-img img {
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
